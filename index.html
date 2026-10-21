@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peakflo Voice Agent QA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Peakflo finance agent workflow</p>
+        <h1>Voice agent QA before a finance pilot</h1>
+        <p class="lede">Check prompt flows for TTS clarity, grounding, human handoff, latency planning and finance guardrails before they touch collections or accounts payable work.</p>
+      </div>
+      <div class="hero-card">
+        <span class="metric">5</span>
+        <span>release checks</span>
+        <small>Voice · RAG · handoff · latency · controls</small>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="input-panel">
+        <label for="scenarioInput">Agent scenarios</label>
+        <textarea id="scenarioInput" spellcheck="false">Collections call for invoice INV-1042, amount ₹84,500 and due date 28 October | verify open invoice, read payment link, escalate disputes above approval limit | ERP invoice record | high
+AP helpdesk summary for vendor onboarding | answer from procurement policy, confirm approval owner, hand off exceptions | policy knowledge base | medium</textarea>
+        <button id="evaluateButton" type="button">Run QA</button>
+      </div>
+      <section id="results" class="results" aria-live="polite">
+        <p class="empty-state">Add one scenario per line: name | workflow | grounding source | risk.</p>
+      </section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
